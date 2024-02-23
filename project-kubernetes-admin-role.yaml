@@ -1,0 +1,117 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: ns-talend # <project-name>-ns
+  name: admin-project
+  labels:
+      client: tfo_internal
+      tfo-bill-aimi_id: "1234"
+      tfo-bill-account: employeeinfo
+      tfo-backup-identifier: 1234_employeeinfo 
+rules:
+- apiGroups:
+  - "" # "" indicates the core API group
+  resources:
+  - pods
+  - pods/exec
+  - pods/log
+  - pods/portforward
+  - persistentvolumeclaims
+  - replicationcontrollers
+  - services
+  - serviceaccounts
+  - configmaps
+  - secrets
+  verbs:
+  - create
+  - delete
+  - get
+  - getlogs
+  - describe
+  - list
+  - exec
+  - portforward
+- apiGroups:
+  - 'apps' 
+  resources:
+  - '*'
+  verbs:
+  - create
+  - delete
+  - get
+  - describe
+  - list
+  - watch
+- apiGroups:
+  - 'batch' 
+  resources:
+  - jobs
+  - cronjobs
+  verbs:
+  - create
+  - delete
+  - get
+  - describe
+  - list
+  - watch
+- apiGroups:
+  - 'networking.k8s.io' 
+  resources:
+  - '*'
+  verbs:
+  - create
+  - delete
+  - get
+  - describe
+  - list
+  - watch  
+- apiGroups:
+  - 'autoscaling' 
+  resources:
+  - horizontalpodautoscalers
+  verbs:
+  - create
+  - delete
+  - get
+  - describe
+  - list
+  - watch 
+- apiGroups:
+  - "" 
+  resources:
+  - limitranges
+  - resourcequotas
+  verbs:
+  - get
+  - describe
+  - list
+- apiGroups:
+  - 'gkebackup.gke.io'
+  resources:
+  - protectedapplications
+  - protectedapplicationgroups
+  verbs:
+  - create
+  - delete 
+  - get
+  - describe
+- apiGroups:
+  - 'networking.istio.io'
+  resources:
+  - '*'
+  verbs:
+  - create
+  - delete 
+  - get
+  - describe
+- apiGroups:
+  - 'admissionregistration.k8s.io' 
+  resources:
+  - '*'
+  verbs:
+  - create
+  - delete
+  - get
+  - describe
+  - list
+  - watch
