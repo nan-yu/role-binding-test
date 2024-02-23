@@ -5,6 +5,6 @@ metadata:
   namespace: ns-talend
 spec:
   git:
-    repo: https://github.com/nan-yu/role-binding-test
+    repo: https://github.com/nan-yu/role-binding-test-ns
     branch: main
     auth: none
