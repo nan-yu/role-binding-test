@@ -1,0 +1,16 @@
+# ROOT_REPO/namespaces/NAMESPACE/sync-rolebinding.yaml
+ kind: RoleBinding
+ apiVersion: rbac.authorization.k8s.io/v1
+ metadata:
+   name: syncs-repo
+   namespace: ns-talend
+   annotations:
+    configsync.gke.io/cluster-name-selector: azusks-i-5274-scixo-cluster
+ subjects:
+ - kind: ServiceAccount
+   name: ns-reconciler-ns-talend-repo-sync-talend-azure-22
+   namespace: config-management-system
+ roleRef:
+   kind: Role
+   name: admin-project
+   apiGroup: rbac.authorization.k8s.io
