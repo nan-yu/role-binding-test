@@ -1,0 +1,10 @@
+apiVersion: configsync.gke.io/v1beta1
+kind: RepoSync
+metadata:
+  name: repo-sync
+  namespace: ns-talend
+spec:
+  git:
+    repo: https://github.com/nan-yu/role-binding-test
+    branch: main
+    auth: none
