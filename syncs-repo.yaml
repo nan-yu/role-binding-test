@@ -4,8 +4,6 @@
  metadata:
    name: syncs-repo
    namespace: ns-talend
-   annotations:
-    configsync.gke.io/cluster-name-selector: azusks-i-5274-scixo-cluster
  subjects:
  - kind: ServiceAccount
    name: ns-reconciler-ns-talend-repo-sync-talend-azure-22
