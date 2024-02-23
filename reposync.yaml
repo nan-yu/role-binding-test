@@ -1,7 +1,7 @@
 apiVersion: configsync.gke.io/v1beta1
 kind: RepoSync
 metadata:
-  name: repo-sync
+  name: repo-sync-talend-azure
   namespace: ns-talend
 spec:
   git:
