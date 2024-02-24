@@ -31,6 +31,8 @@ rules:
   - list
   - exec
   - portforward
+  - patch
+  - update
 - apiGroups:
   - 'apps' 
   resources:
