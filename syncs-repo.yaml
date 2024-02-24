@@ -10,5 +10,6 @@
    namespace: config-management-system
  roleRef:
    kind: Role
-   name: admin-project
+   name: admin-test
    apiGroup: rbac.authorization.k8s.io
+   
