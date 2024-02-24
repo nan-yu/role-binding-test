@@ -8,3 +8,7 @@ spec:
     repo: https://github.com/nan-yu/role-binding-test-ns
     branch: main
     auth: none
+  override:
+   logLevels:
+   - containerName: reconciler
+     logLevel: 7
