@@ -19,7 +19,7 @@ rules:
   - persistentvolumeclaims
   - replicationcontrollers
   - services
-  - service/status
+  - services/status
   - serviceaccounts
   - configmaps
   - secrets
