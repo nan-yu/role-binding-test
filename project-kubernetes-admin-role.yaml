@@ -42,6 +42,8 @@ rules:
   - describe
   - list
   - watch
+  - update
+  - patch
 - apiGroups:
   - 'batch' 
   resources:
