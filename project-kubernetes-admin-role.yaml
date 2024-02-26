@@ -29,11 +29,8 @@ rules:
   - get
   - getlogs
   - describe
-  - list
   - exec
   - portforward
-  - patch
-  - update
 - apiGroups:
   - 'apps' 
   resources:
@@ -43,10 +40,6 @@ rules:
   - delete
   - get
   - describe
-  - list
-  - watch
-  - update
-  - patch
 - apiGroups:
   - 'batch' 
   resources:
@@ -79,8 +72,6 @@ rules:
   - delete
   - get
   - describe
-  - list
-  - watch 
 - apiGroups:
   - "" 
   resources:
